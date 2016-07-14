@@ -15,13 +15,13 @@ Dropdown Tree
 
 </head>
 <body>
-
-	<a href="https://github.com/JosephSKh" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-
-<div class="dropdown dropdown-tree" id="firstDropDownTree">
+	
+		<a href="https://github.com/JosephSKh" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
 
-</div>
+<div class="dropdown dropdown-tree" id="firstDropDownTree"></div>
+<div class="dropdown dropdown-tree" id="firstDropDownTree2"></div>
+<div class="dropdown dropdown-tree" id="firstDropDownTree3"></div>
 
 
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -74,18 +74,67 @@ var options = {
 	maxHeight: 300,
 	clickHandler: function(element){
 		//gets clicked element parents
-		console.log($("#firstDropDownTree").GetParents());
+		console.log($(element).GetParents());
 		//element is the clicked element
 		console.log(element);
 		$("#firstDropDownTree").SetTitle($(element).find("a").first().text());
 		console.log("Selected Elements",$("#firstDropDownTree").GetSelected());
+	},
+	expandHandler: function(element,expanded){
+		console.log("expand",element,expanded);
+	},
+	checkHandler: function(element,checked){
+		console.log("check",element,checked);
+	},
+	closedArrow: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+	openedArrow: '<i class="fa fa-caret-down" aria-hidden="true"></i>',
+	multiSelect: true,
+	selectChildren: true,
+}
+
+$("#firstDropDownTree").DropDownTree(options);
+
+
+
+
+var options2 = {
+	title : "DropDown Tree 2",
+	data: arr3,
+	maxHeight: 3000,
+	clickHandler: function(element){
+				//gets clicked element parents
+		console.log($(element).GetParents());
+		//element is the clicked element
+		console.log(element);
+		$("#firstDropDownTree2").SetTitle($(element).find("a").first().text());
+		console.log("Selected Elements",$("#firstDropDownTree2").GetSelected());
 	},
 	closedArrow: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
 	openedArrow: '<i class="fa fa-caret-down" aria-hidden="true"></i>',
 	multiSelect: true,
 }
 
-$("#firstDropDownTree").DropDownTree(options);
+
+$("#firstDropDownTree2").DropDownTree(options2);
+
+
+var options3 = {
+	title : "DropDown Tree 3",
+	data: arr3,
+	maxHeight: 300,
+	expandHandler: function(element, expanded){
+		if(expanded){
+			$("#firstDropDownTree3").AddChildren(element, arr3);
+		}
+	},
+	closedArrow: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+	openedArrow: '<i class="fa fa-caret-down" aria-hidden="true"></i>',
+	selectChildren: true,
+	multiSelect: true,
+}
+
+
+$("#firstDropDownTree3").DropDownTree(options3);
 
 </script>
 
