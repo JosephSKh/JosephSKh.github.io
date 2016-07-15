@@ -40,7 +40,8 @@ from,to{color:transparent}
 50%{color:inherit}
 }
 .cover .cover-sm{font-size:18px;margin:25px;color:#fff;position:relative;padding:3px}
-.cover .cover-sm:after{content:'';background-color:rgba(0,0,0,0.15);width:40px;height:40px;position:absolute;top:-7px;left:-9px;border-radius:4px;z-index:-1;transform:rotate(45deg);border:2px solid #fff}
+.cover .cover-sm:after{content:'';background-color:rgba(0,0,0,0.15);width:40px;height:40px;position:absolute;top:-7px;left:-9px;border-radius:4px;transform:rotate(45deg);border:2px solid #fff}
+.cover .cover-sm:before{z-index: 1; position: relative;}
 .cover .fa-facebook:hover:after{background-color:#3b5998;border:none}
 .cover .fa-google:hover:after{border:none;background-color:#dd4b39}
 .cover .fa-linkedin:hover:after{border:none;background-color:#0077b5}
@@ -61,3 +62,18 @@ from,to{color:transparent}
 .profile-pic li{border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px}
 .profile-pic ul li:last-child{border-bottom: none}
 section>h2{font-size: 40px; text-align: center; font-weight: bold;}
+.main-menu li{border-bottom: 3px solid transparent}
+.main-menu li:hover{border-bottom: 3px solid #395064}
+
+/*Responsive*/
+@media(max-width: 768px){
+  .main-menu ul{width: 100%; margin: 5px 0}
+.cover h1{font-size:50px;color:#395064}
+.cover{padding: 20px 0; min-height: 530px}
+}
+@media(max-width: 992px){
+
+}
+@media(max-width: 1200px){
+
+}
