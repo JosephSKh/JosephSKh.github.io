@@ -59,7 +59,7 @@ from,to{color:transparent}
 }
 .profile-pic > div{position: relative;}
 .profile-pic{position: relative; border-radius: 4px; overflow: hidden; border: 1px solid #eee; box-shadow: 0 3px 0px #eee;}
-.about{margin-top: 50px}
+.about{margin-top: 50px; margin-bottom: 30px}
 .profile-pic ul{list-style: none; padding-right: 40px}
 .profile-pic li{border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px}
 .profile-pic ul li:last-child{border-bottom: none}
@@ -119,11 +119,17 @@ section p{line-height: 2}
 .main-menu li.active a{
     background: transparent !important;
 }
+
+
+#repos{color: #fff; position: relative;}
+#repos a{color: #fff}
+
 /*Responsive*/
 @media(max-width: 768px){
   .main-menu ul{width: 100%; margin: 5px 0}
 .cover h1{font-size:50px;color:#395064}
 .cover{padding: 20px 0; min-height: 530px}
+.cover h3{font-size: 18px;}
 }
 @media(max-width: 992px){
 
