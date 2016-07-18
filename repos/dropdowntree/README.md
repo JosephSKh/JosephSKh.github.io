@@ -2,14 +2,14 @@
 # DropdownTree
 Dropdown Tree is a dynamic dropdown menu based on bootstrap and jquery with click handlers, data handlers. With single and multi item select and ajax request for getting data
 
-### [DEMO](https://JosephSKh.github.io)
+### [DEMO](https://JosephSKh.github.io/repos/dropdowntree)
 
 ![Dropdown Tree Screenshot](http://i.imgur.com/xWIEmyz.png)
 
 # Getting Started:
 ##### Include JQuery, Bootstrap and FontAwesome
 Download the `dropdowntree.js` and `dropdowntree.css`
-##### please refer to `DropdownTree.html` for full example
+##### please refer to `index.html` for full example
 create a div with the class `dropdown-tree`
 
 ex:
