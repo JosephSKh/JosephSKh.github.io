@@ -79,6 +79,7 @@ section>h2{font-size: 40px;
 .main-menu li:hover{border-bottom: 3px solid #395064}
 section h3{text-transform: uppercase; font-weight: bold}
 section p{line-height: 2}
+section{overflow: hidden;}
 .skills{font-size: 16px; font-weight: bold}
 .about .container > .col-sm-6:first-child{float: right;    margin-bottom: 30px;}
 .green-btn:hover, .green-btn:active, .green-btn:focus {
@@ -142,6 +143,18 @@ section p{line-height: 2}
 #exp .container .exp-item:nth-child(odd){text-align: right}
 /*end experience timeline*/
 
+#works{color: #fff}
+#works h2{border: none; box-shadow: none}
+.work h2 {
+    font-size: 70px;
+    margin: 0;
+}
+.work {
+    text-align: center;
+}
+.work i {
+    font-size: 100px;
+}
 /*Responsive*/
 @media(max-width: 768px){
   .main-menu ul{width: 100%; margin: 5px 0}
