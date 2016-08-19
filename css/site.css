@@ -51,6 +51,7 @@ from,to{color:transparent}
 .cover .fa-linkedin:hover:after{border:none;background-color:#0077b5}
 .cover .fa-github-alt:hover:after{border:none;background-color:#999}
 .cover .fa-stack-overflow:hover:after{border:none;background-color:#fe7a15}
+.cover .fa-behance:hover:after{border:none;background-color:#1769ff}
 .main-menu{margin-bottom: 0; font-weight:700;background:#fff;border:none;border-bottom:1px solid #ccc;box-shadow:0 0 4px rgba(0,0,0,0.3);border-radius:0}
 .profile-pic div img:first-child{    margin-top: -50px;}
 .profile-pic > div img:nth-child(2) {
