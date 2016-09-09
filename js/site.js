@@ -69,5 +69,14 @@ function onScroll(event){
 }
 
 
+//MixItUo
+$(function(){
+
+    // Instantiate MixItUp:
+
+    $('#PortfolioContainer').mixItUp();
+
+});
+
 
 });
