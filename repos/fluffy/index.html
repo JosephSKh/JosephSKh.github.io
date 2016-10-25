@@ -150,7 +150,13 @@ console.log(e);
 						break;
 
 					case "Introduce":
-						answer = "Hello :D nice to meet you";
+						var personName = "";
+						for( var i = 0 ; i < e.entities.length ; i++){
+							if(e.entities[i].type == "Name"){
+								personName = e.entities[i].entity;
+							}
+						}
+						answer = "Hello "+personName+" :D nice to meet you";
 						break;
 
 					case "ThankYou":
