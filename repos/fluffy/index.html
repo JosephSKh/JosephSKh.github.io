@@ -100,6 +100,7 @@ var fluffyInterval = setInterval(function(){
 },5000);
 
 $("#fluffychat").submit(function(e){
+		clearInterval(fluffyInterval);
 	e.preventDefault();
 	var msg = $(this).find("textarea").val();
 	$.ajax({
