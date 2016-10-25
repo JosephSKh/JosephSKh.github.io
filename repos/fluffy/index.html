@@ -105,7 +105,63 @@ $("#fluffychat").submit(function(e){
 	$.ajax({
 		url:"https://api.projectoxford.ai/luis/v1/application?id=c29064ac-d555-4639-ae69-f80dd651eb37&subscription-key=edef358ffe414540ad793d044777c6ec&q="+msg,
 		success:function(e){
-			$(".fluffytalk").text("Thank you for sending me a sentence ! <3 :*");
+
+console.log(e);
+
+			var rIntents = e.intents;
+			var score = 0;
+			var rIntent = "";
+			var answer = "";
+			for(var i = 0 ; i<rIntents.length ; i++){
+				if(rIntents[i].score>=score){
+					rIntent = rIntents[i].intent;
+					score = rIntents[i].score;
+				}
+			}
+
+			switch(rIntent){
+					case "None":
+						answer = "Sorry, I didn't get that, can you tell me another thing?";
+						break;
+
+					case "Hello":
+						answer = "Hey there =)";
+						break;
+
+					case "BadWord":
+						answer = "That's a bad word, I don't think you shall say that to such a cute pie like me =/";
+						break;
+
+					case "Love":
+						answer = "I love you more <3";
+						break;
+
+					case "HowAreYou":
+						answer = "I'm feeling great,, thank you";
+						break;
+
+					case "Description":
+						answer = "I'm fluffy, and I'm here to learn";
+						break;
+
+					case "Compliment":
+						answer = "Thank you, so are you ! :D";
+						break;
+
+					case "Introduce":
+						answer = "Hello :D nice to meet you";
+						break;
+
+					case "ThankYou":
+						answer = "You are welcome !";
+						break;
+
+					case "HowOld":
+						answer = "I'm not so old, I've just been born :$";
+						break;
+			}
+
+			$(".fluffytalk").text(answer);
 		},
 		error:function(e){
 			$(".fluffytalk").text("An error occured ='(");
