@@ -1,3 +1,4 @@
+*{font-family: 'Droid Sans'}
 body{border-bottom: 20px solid #395064}
 .mouse-icon .wheel{position:relative;border-radius:10px;background:#fff;width:4px;height:10px;top:4px;margin-left:auto;margin-right:auto}
 @-webkit-keyframes drop {
