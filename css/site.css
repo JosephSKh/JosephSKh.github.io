@@ -142,7 +142,9 @@ section{overflow: hidden;}
 #exp .container .exp-item:nth-child(odd) .exp-date{right: -250px}
 #exp .container .exp-item:nth-child(even) .exp-date{left: -250px}
 #exp .container .exp-item:nth-child(even):after{left: -1px}
-.exp-item > .col-md-10{border: 1px solid #ccc; padding-bottom: 10px}
+.exp-item > .col-md-10{ padding-bottom: 10px;background: #333;color: #fff;}
+.col-md-6.exp-item:before {content: '';position: absolute;left: 0;background: #cccccc;width: 50%;height: 2px;top: 10px;}
+#exp .container .exp-item:nth-child(odd):before {right: 0;left: initial;}
 #exp .container .exp-item:nth-child(odd){text-align: right}
 /*end experience timeline*/
 
@@ -256,6 +258,7 @@ section{overflow: hidden;}
 .exp-item:after{display: none;}
 #exp .container .exp-item{text-align: left !important}
 .exp-date{position: relative;left: 0 !important; top: 1px; border-bottom: none; z-index: 1; }
+#exp .container .exp-item:before {display: none !important}
 }
 @media(max-width: 1200px){
 
