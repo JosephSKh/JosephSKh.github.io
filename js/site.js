@@ -75,8 +75,9 @@ $(function(){
     // Instantiate MixItUp:
 
     $('#PortfolioContainer').mixItUp();
+    $('#PortfolioContainer').on('mixEnd', function(e, state){
+        setTimeout(function(){$(window).trigger('resize');},600)
+    });
 
 });
-
-
 });

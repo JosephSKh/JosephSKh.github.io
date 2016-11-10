@@ -162,6 +162,7 @@ section{overflow: hidden;}
 }
 
 /*mixitup*/
+#port{background: #fff;}
 #PortfolioContainer, #PortfolioContainer *,.lightbox, .lightbox *{transition: none}
 #PortfolioContainer .mix{
     display: none;
