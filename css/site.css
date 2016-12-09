@@ -164,6 +164,8 @@ section{overflow: hidden;}
 /*mixitup*/
 #port{background: #fff;}
 #PortfolioContainer, #PortfolioContainer *,.lightbox, .lightbox *{transition: none}
+.lb-outerContainer {width: 90% !important;overflow-y: auto !important;max-height: 90vh;}
+.lb-outerContainer img {width: 100% !important;height: auto !Important;}
 #PortfolioContainer .mix{
     display: none;
 }
