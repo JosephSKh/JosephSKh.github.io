@@ -53,9 +53,13 @@ table {
 }
 body{
     font-size: 16px;
+    overflow: hidden;
 }
-h1, h2{
-    font-family: plume
+h1, h1 *, h2, h2 *{
+    font-family: plume !important
+}
+p, span{
+    font-family: raleway
 }
 h1{
     font-size: 11em;
@@ -65,7 +69,7 @@ h2{
 }
 .landing{
     background: url('../assets/images/cross.jpg');
-    min-height: 670px;
+    min-height: 550px;
     height: 100vh;
     text-align: center;
     background-size: cover;
@@ -78,6 +82,7 @@ h2{
     margin-top: 200px;
     position: relative;
     top: -50%;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.18);
 }
 .landing h1 span{
     color: #cc0000
@@ -92,12 +97,17 @@ h2{
     to {transform: scale(1)}
 }
 
+@keyframes scroll {
+    from {top: 3px; opacity: 0}
+    to {top: 32px; opacity: 1}
+}
+
 .landing img.spin{
     position: absolute;
     top: 50%;
     left: 50%;
     animation-name: spin;
-    animation-duration: 50s;
+    animation-duration: 80s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     width: 100%;
@@ -114,9 +124,84 @@ h2{
     animation-duration: 1s;
     animation-timing-function: linear;
 }
+ul.navigation {
+    position: fixed;
+    top: 30%;
+    transform: translate(-50%);
+    z-index: 3;
+    right: 10px;
+}
+ul.navigation li {
+    background: #333333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+    right: 0;
+    position: relative;
+    transition: all 0.2s linear;
+}
+ul.navigation li:hover {
+    background-color: #6d6d6d;
+    right: 5px;
+}
+ul.navigation li.active {
+    background-color: #cc0000;
+    right: 5px;
+}
+span.line-container .line {
+    position: absolute;
+    background: #333333;
+    width: 2px;
+    height: 15px;
+    left: calc(50% - 1px);
+    top: 3px;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+span.line-container {
+    position: absolute;
+    width: 32px;
+    height: 56px;
+    border: 2px solid #333333;
+    border-radius: 35px;
+    bottom: 20px;
+    cursor: pointer;
+    transform: translate(-50%);
+    left: 50%
+}
+.click-me{
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    color: #333;
+    font-weight: bold;
+}
 
 .content{
     background: url('../assets/images/lines.jpg');
     background-size: cover;
     height: 1000px
+}
+
+/* responsive */
+@media (max-width: 678px) {
+
+}
+@media (max-width: 678px) {
+    .landing h1{
+        margin-top: 80px
+    }
+}
+@media (max-width: 500px) {
+    h1{font-size: 5em}
 }
