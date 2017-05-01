@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
         <title>PTF ExDay 2017</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,10 +13,14 @@
         <ul class="navigation">
             <li data-section="landing"><i class="fa fa-home" aria-hidden="true"></i></li>
             <li data-section="content"><i class="fa fa-book" aria-hidden="true"></i></i></li>
+            <li data-section="speakers"><i class="fa fa-microphone" aria-hidden="true"></i></i></li>
+            <li data-section="videos"><i class="fa fa-youtube" aria-hidden="true"></i></i></li>
+            <li data-section="maps"><i class="fa fa-map-marker" aria-hidden="true"></i></i></li>
         </ul>
         <section data-name="landing" class="landing">
             <div class="container">
                 <img class="logo" src="assets/images/ptflogo.png"/>
+				<span class="live-stream-tooltip" data-toggle="tooltip" data-placement="bottom" title="Coming Soon!"><span class="fa fa-podcast"></span> Live Stream</span>
                 <img class="spin" src="assets/images/bubbles.png"/>
                 <h1>PTF <span>Ex</span>Day 2017</h1>
                 <h2>Spreading Knowledge</h2>
@@ -26,10 +31,113 @@
             </div>
         </section>
         <section data-name="content" class="content">
-
+            <div class="container">
+            <div class="col-md-6">
+                <h2>About PTF</h2>
+                PTF stands for “Prince Theodore Family”. PTF is a christian weekly gathering for computer science students. We hold our meeting at the cathedral on each Saturday.
+<h3>OUR VISION</h3>
+We aim to become the most proactive source of technology that serves our Egyptian christian society including all churches, denominations and communities.
+<h3>OUR MISSION</h3>
+Because we believe in the power of the group and that God gathered us for a reason , we invest in our individuals through the following :
+<ol>
+<li>Creating a christian spiritual society for our computer science students</li>
+<li>Seeking continuous development and improvement of our members on a spiritual, scientific, pragmatic and cultural levels.</li>
+<li>Providing technical and advisory support to all our community members.</li>
+<li>Discovering and developing the talents of our community members through our committees.</li>
+<li>Organizing and Directing the efforts of our members towards their improvement.</li>
+</ol>
+<h3>WHAT WE DO?</h3>
+As Computer Scientists in our own right, we had to divide and conquer the management bulk. We’re clustered in several groups , or “Committees” under one central management , called “The high board”. Each committee serves a special function that utilizes the talents of its members to serve our greater goal, our God’s : “Who will have all men to be saved, and to come unto the knowledge of the truth.” (1 Timothy 2:4).
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/t.png" style="width: 100%; margin-top: 100px"/>
+            </div>
+</div>
         </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <section data-name="speakers" class="container">
+            <h2>Speakers</h2>
+            <div class="speakers-container">
+                <div class="speaker active" style="background-image: url('assets/images/1.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Satya Nadella</h3>
+                        <h4>Microsoft CTO</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/2.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Mona Shokrof</h3>
+                        <h4>Agile coach and co-founder at Agile arena</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/3.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Maged Eryan</h3>
+                        <h4>Violinist</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/4.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Mena Maurice</h3>
+                        <h4>Disney Movies Dubber</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/5.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Maged Baky</h3>
+                        <h4>Architect</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/6.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Antone Magdy</h3>
+                        <h4>3D Artist</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/7.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Amr Wahba</h3>
+                        <h4>Writer and Comedy Actor</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/8.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Satya Nadella</h3>
+                        <h4>Microsoft CTO</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/9.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Sophia Medhat</h3>
+                        <h4>Ballet Dancer</h4>
+                    </div>
+                </div>
+                <div class="speaker" style="background-image: url('assets/images/10.jpeg')">
+                    <div class="col-md-12 speaker-info">
+                        <h3>Chérif Cassis</h3>
+                        <h4>Pianist</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section data-name="videos" class="container">
+			<h2>Previous Videos</h2>
+			<h3>Axioms</h3>
+			<div class="prev-videos-axioms"></div>
+			<div class="clearfix"></div>
+			<h3>Conformity</h3>
+			<div class="prev-videos-conformity"></div>
+		</section>
+		<section data-name="maps" class="container">
+		    <h3>Maps</h3>
+			<div id="map"></div>
+		</section>
+		<footer>
+            All Rights Reserved - PTF ExDay 2017
+        </footer>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="scripts/site.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOgen6lROD96RJgDGDECBtFUJDbz7D8jE&callback=initMap" async defer></script>
+		<script src="scripts/site.js"></script>
     </body>
 </html>

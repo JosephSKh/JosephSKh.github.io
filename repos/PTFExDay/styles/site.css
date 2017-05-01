@@ -28,6 +28,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+section{
+    padding: 15px 0;
+}
 body {
 	line-height: 1;
 }
@@ -53,12 +56,29 @@ table {
 }
 body{
     font-size: 16px;
+    background: url('../assets/images/lines.jpg');
+    background-size: cover;
+    line-height: 1.4
 }
 h1, h1 *, h2, h2 *{
     font-family: plume !important
 }
-p, span{
+h1, h2, h3{
+    margin-bottom: 15px;
+}
+p, span, h3, h4, ol, div{
     font-family: raleway
+}
+.content h3{
+    margin-top: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc
+}
+h3{
+    font-size: 20px 
+}
+ol{
+    list-style: decimal
 }
 h1{
     font-size: 11em;
@@ -78,7 +98,7 @@ h2{
     background-attachment: fixed
 }
 .landing h1{
-    margin-top: 200px;
+    margin-top: 100px;
     position: relative;
     top: -50%;
     text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.18);
@@ -86,6 +106,36 @@ h2{
 .landing h1 span{
     color: #cc0000
 }
+.live-stream-tooltip {
+    position: absolute;
+    z-index: 10;
+    /*color: #cc0000;*/
+    transition: all 0.2s linear;
+    /*text-shadow: 0px 0px 0px #cc0000;*/
+    right: 100px;
+    font-size: 20px;
+}
+
+.live-stream-tooltip:hover {
+    /*text-shadow: 0px 0px 12px #cc0000;*/
+}
+
+.tooltip.bottom .tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #cc0000;
+}
+.tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: #cc0000;
+    border-radius: 4px;
+}
+
 @keyframes spin {
     from {transform: translate(-50%,-50%) rotate(0deg);}
     to {transform: translate(-50%,-50%) rotate(360deg)}
@@ -139,7 +189,7 @@ ul.navigation li {
     font-size: 24px;
     border-radius: 50%;
     margin-bottom: 10px;
-    padding-top: 8px;
+    padding-top: 5px;
     cursor: pointer;
     right: 0;
     position: relative;
@@ -187,11 +237,68 @@ span.line-container {
 }
 
 .content{
-    background: url('../assets/images/lines.jpg');
-    background-size: cover;
-    height: 1000px
 }
 
+.speakers-container{
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background: #000;
+}
+.speaker {
+    height: 100%;
+    width: 100px;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.2s linear;
+}
+.speaker:hover{
+  
+    opacity: 0.4;
+}
+.speaker.active{
+    width: 700px;
+    opacity: 1; 
+    position: relative;
+}
+.speaker-info h4 {
+    font-family: raleway;
+}
+.speaker-info h3 {
+    font-family: raleway;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.speaker-info {
+    background: rgba(0, 0, 0, 0.38);
+    color: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0;
+    bottom: -100%;
+    transition: bottom 0.2s linear;
+    display: none;
+}
+.speaker.active .speaker-info{
+    bottom: 0;
+    display: block;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
+       footer {
+    background: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: raleway;
+}
 /* responsive */
 @media (max-width: 678px) {
 
