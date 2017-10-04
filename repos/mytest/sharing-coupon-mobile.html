@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html>
+<head>
+    <style>
+        html .main-container{
+            
+                background-image: url(https://i.imgur.com/KrOkJMn.png);
+                height: 430px!important;
+                width: 351px!important;
+                background-size: 350px 425px;
+                background-repeat: no-repeat;
+            }
+        
+        body {
+                margin: 0px!important;
+    overflow: hidden!important;
+             background-color: #000000;
+        }
+        a {
+            text-decoration:none;
+        }
+        html {
+            font-family: "JF-Flat", "CircularStd", "Poppins", Helvetica, Arial, sans-serif !important;
+        }
+
+        .sharing-img-logo {
+            width: 50%;
+        }
+
+        .sharing-logo {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .sharing-txt-cont {
+            margin-left: 25.5%;
+        }
+
+        .sharing-txt {
+            color: #626262;
+            display: inline-block;
+            position: relative;
+            top: -12px;
+            font-size: 12px;
+            padding-left: 2px;
+        }
+
+        .sharing-coast {
+            color: white;
+            font-size: 52px;
+        }
+
+        .sharing-code-cont {
+            margin-left: 25.5%;
+            margin-top: 15px;
+        }
+
+        .sharing-code-txt {
+            color: white;
+        }
+
+        .sharing-code {
+            color: #afb600;
+        }
+
+        .sharing-second-cont {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        html div#om-pbfyyro5krmqolzvshtp {
+        }
+
+        .sharing-first-txt {
+            color: white;
+            font-size: 26px;
+        }
+
+        .marging-top-2 {
+            margin-top: 2%;
+        }
+
+        .sharing-try {
+            color: white;
+        }
+
+        .sharing-exp {
+            color: #9e9e9e;
+        }
+
+        .sharing-share {
+            color: white;
+        }
+
+        .sharing-btns-cont {
+            text-align: center;
+           
+        }
+
+        html div#om-pbfyyro5krmqolzvshtp {
+        }
+
+        .sharing-cupon-cont {
+            transform: rotate3d(0, 1, -1, 1deg);
+        }
+
+        html .cleveland-outer-wrap {
+            left: auto !important;
+            right: 20px !important;
+            top: 42% !important;
+        }
+        .mobile-only{
+            display: none;
+        }
+        @media only screen and (max-width: 768px) {
+.mobile-only{
+    display: inline;
+}
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script>
+$.ajax({
+    url: 'https://papi.almentor.net/api/oauth/token',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({
+      "password": "1qazxsw2",
+      "username": "share_coupons_sm@gmail.com"
+    }),
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("Authorization", "Basic " + btoa('share_coupons_sm@gmail.com' + ":" + '1qazxsw2'));
+    },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': ' application/json'
+    },
+    success: function(res) {
+      console.log(res);
+      $.ajax({
+        url: 'https://papi.almentor.net/api/coupons/generate',
+        type: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': ' application/json',
+          'Authorization': res.token_type + " " + res.access_token
+        },
+        success: function(res) {
+          console.log(res)
+          $(".code").html(res.code)
+          var sharingUrl = 'http://www.almentor.net/invitationcode/?code='+ res.code;
+          var TwtsharingUrl = 'http://www.almentor.net/invitationcode/?code='+ res.code;   
+          console.log(sharingUrl);
+           var twitterShare = 'https://twitter.com/share?'+'url='+TwtsharingUrl + '/&text='+ res.code + ' كوبون دعوة ليوم واحد للمرحلة التجريبية لشبكة المنتور مع خصم $20+&hashtags=almentor_net&via=almentornet';
+          var facebookShare  = 'http://www.facebook.com/sharer.php?'+'u='+sharingUrl ;
+          var whatsappShare = 'whatsapp://send?text=text=Inviation code - '+sharingUrl;
+          var fbMessenger = 'fb-messenger://share/?link='+sharingUrl;
+
+          console.log(facebookShare);
+          document.getElementById("twitter").href = twitterShare;
+          document.getElementById("facebook").href = facebookShare;
+          document.getElementById("whatsapp").href = whatsappShare;
+          document.getElementById("messenger").href = fbMessenger;
+
+          
+
+
+        }
+      });
+    }
+  })
+  
+    </script>
+</head>
+<body> 
+    <div class="main-container">
+           
+        <div class="sharing-cupon-cont">
+            <div class="sharing-logo"> <img class="sharing-img-logo" src="https://i.imgur.com/iqPASbw.png" alt="alm-logo"> </div>
+            <div class="sharing-txt-cont"> <span class="sharing-coast">20$</span> <span class="sharing-txt">FREE VOUCHER</span> </div>
+            <div class="sharing-code-cont"> <span class="sharing-code-txt">CODE:</span> <span class="sharing-code code"></span> </div>
+        </div>
+        <div class="sharing-second-cont">
+            <div class="sharing-first-txt"> يمكنك الان دعوة ثلاثة من أصدقائك </div>
+            <div class="sharing-try">  $لتجربة شبكة.المنتور والاستفادة من كوبون خصم بقيمة 20 </div>
+            <div class="sharing-exp"> هذا الكوبون صالح لمدة يوم واحد، يمكن استخدام الكوبون كدعوة للتسجيل في المرحلة التجريبية وكذلك الاستفادة بخصم حتى 20$ عند شراء أي دورة  </div>
+            <div class="sharing-share">  شارك الكوبون مع أصدقائك على </div>
+        </div>
+        <div class="sharing-btns-cont">
+            <a id="facebook"  target="_blank"> <img src="https://i.imgur.com/gH71ZSj.png"> </a>
+            <a id="twitter"  target="_blank" >  <img src="https://i.imgur.com/jigcsHO.png"> </a>
+            <a id="whatsapp" target="_blank" > <img src="https://i.imgur.com/aX8zBRq.png"> </a>
+            <a id="messenger" > <img src="https://i.imgur.com/T1sKZIK.png"> </a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
